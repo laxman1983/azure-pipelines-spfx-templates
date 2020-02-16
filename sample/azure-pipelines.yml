@@ -8,7 +8,7 @@ resources:
   - repository: azure-pipelines-spfx-templates
     type: github
     name: voitanos/azure-pipelines-spfx-templates
-    endpoint: voitanos-github
+    endpoint: laxman1983
 
 variables:
   - group: office365credentials
@@ -38,7 +38,7 @@ stages:
         target_environment: Development
         o365_user_login: $(AdminUserLogin)
         o365_user_password: $(AdminUserPassword)
-        o365_app_catalog_site_url: https://voitanosdev.sharepoint.com/sites/SPFx-DevOps-DevEnv
+        o365_app_catalog_site_url: https://basfce1.sharepoint.com/teams/SPXCICD
         o365cli_app_catalog_scope: sitecollection
         o365cli_deploy_extra_arguments: '--skipFeatureDeployment'
 - stage: Deploy_Prod
@@ -52,6 +52,6 @@ stages:
         target_environment: Production
         o365_user_login: $(AdminUserLogin)
         o365_user_password: $(AdminUserPassword)
-        o365_app_catalog_site_url: https://voitanosdev.sharepoint.com/sites/SPFx-DevOps-ProdEnv
+        o365_app_catalog_site_url: hhttps://basfce1.sharepoint.com/teams/SPXCICD
         o365cli_app_catalog_scope: sitecollection
         o365cli_deploy_extra_arguments: '--skipFeatureDeployment'
